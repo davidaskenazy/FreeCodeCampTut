@@ -10,17 +10,17 @@ class TextSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
             padding: const EdgeInsets.fromLTRB(_hPad, 32.0, _hPad, 4.0),
-            child: Text(_title, style: Theme.of(context).textTheme.headline6),
-          ),
-          Container(
-            padding: const EdgeInsets.fromLTRB(_hPad, 10.0, _hPad, _hPad),
-            child: Text(_body, style: Theme.of(context).textTheme.bodyText2),
-          ),
-        ]);
+            child: Text(_title, style: Theme.of(context).textTheme.headline6)),
+        Container(
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: _hPad),
+            child: Text(_body, style: Theme.of(context).textTheme.bodyText2)),
+      ],
+    );
   }
 }
